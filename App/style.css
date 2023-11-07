@@ -1,0 +1,54 @@
+#entorno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.movil {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.elephant-size{
+  width: 40%;
+  height: auto;
+  filter: opacity(30%);
+  object-fit: cover;
+}
+
+
+body, html {
+  height: 100%;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.img-container {
+  display: inline-flex;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.cuadricula{
+  z-index: 3;
+  position: absolute;
+}
