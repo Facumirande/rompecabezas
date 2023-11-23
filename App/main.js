@@ -75,12 +75,24 @@ function iman() {
             const posy = parseFloat(pieza.style.top);
 
             const coordenadas = {
-                A: { left: 524, top: 8 },
+                A: { left: 50, top: 8 },
                 B: { left: 850, top: 60 },
                 C: { left: 491, top: 321 },
                 D: { left: 805, top: 377 },
             };
 
+            
+            // const contenedor = document.querySelector('.center');
+            // const coordenadasRelativas = obtenerCoordenadasRelativas(pieza, contenedor);
+
+            // const coordenadasObjetivo = {
+            //     A: coordenadasRelativas.esquinaSuperiorIzquierda,
+            //     B: coordenadasRelativas.esquinaSuperiorDerecha,
+            //     C: coordenadasRelativas.esquinaInferiorIzquierda,
+            //     D: coordenadasRelativas.esquinaInferiorDerecha,
+            // };
+
+            
             const distanciaDeteccion = 45;
 
             for (const etiqueta in coordenadas) {
@@ -109,3 +121,31 @@ middleLayer.addEventListener('click', () => {
     middleLayer.style.pointerEvents = 'none';
     bottomLayer.style.pointerEvents = 'auto';
 });
+
+// Función para obtener coordenadas relativas de un elemento con respecto a un contenedor
+function obtenerCoordenadasRelativas(elemento, contenedor) {
+    const elementoRect = elemento.getBoundingClientRect();
+    const contenedorRect = contenedor.getBoundingClientRect();
+  
+//     const coordenadasRelativas = {
+//       esquinaSuperiorIzquierda: {
+//         left: (elementoRect.left - contenedorRect.left) / contenedorRect.width,
+//         top: (elementoRect.top - contenedorRect.top) / contenedorRect.height,
+//       },
+//       esquinaSuperiorDerecha: {
+//         left: (elementoRect.right - contenedorRect.left) / contenedorRect.width,
+//         top: (elementoRect.top - contenedorRect.top) / contenedorRect.height,
+//       },
+//       esquinaInferiorIzquierda: {
+//         left: (elementoRect.left - contenedorRect.left) / contenedorRect.width,
+//         top: (elementoRect.bottom - contenedorRect.top) / contenedorRect.height,
+//       },
+//       esquinaInferiorDerecha: {
+//         left: (elementoRect.right - contenedorRect.left) / contenedorRect.width,
+//         top: (elementoRect.bottom - contenedorRect.top) / contenedorRect.height,
+//       },
+//     };
+  
+//     return coordenadasRelativas;
+//   }
+}
